@@ -1,33 +1,80 @@
-# <h1 align="center">Tugas Pendahuluan Modul [Nomor Modul] - [Judul Modul/Topik]</h1>
-<p align="center">[Nama Praktikan] - [NIM]</p>
+# <h1 align="center">Tugas Pendahuluan Modul [03] - [Tipe data dan instruksi data]</h1>
+<p align="center">[Paschalis Rolland Setianto Nugroho] - [109092600011]</p>
 
-### 1. Sisa Kue
+### 1. Sisa.go
 
 ```go
-[Tempelkan kode program di sini, contoh: sisa_kue.go]
+package main
+
+import "fmt"
+
+func main() {
+
+	var y, x int
+
+	//input
+	fmt.Scan(&y, &x)
+
+	//output
+	fmt.Println(y % x)
+}
 ```
 
 ##### Output
-<!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/renwxyz/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instriksi-dasar/tp/sisa/output.png)
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/sisa/Screenshot%202026-09-30%20153655.png
 
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+langkah awal yaitu membaca soal lalu menentukan variable menggunakan huruf y dan x dengan tipe data integer, membuat input untuk user dari untuk menghasilkan variable y dan x, buat print dari hasil y modulo x dan menghasilkan input sesuai pada soal di modul
 
-### 2. [nama_soal, misal: kalkulator.go]
+### 2. bool.go
 
 ```go
-[Tempelkan kode program di sini, contoh: kalkulator.go]
+package main
+
+import "fmt"
+
+func main() {
+	var inputBool bool
+
+	fmt.Scan(&inputBool)
+
+	fmt.Println(inputBool)
+}
+
 ```
 
 ##### Output
-<!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/renwxyz/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instriksi-dasar/tp/konversi/output.png)
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/bool/Screenshot%202026-09-30%20153746.png
 
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+langkah awal yaitu membaca soal lalu menentukan variable menggunakan inputbool bool, membuat input untuk user dari variabel inputbool, buat print dari hasil inputbool dan menghasilkan input sesuai pada soal di modul.
+
+### 2. konversi.go
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var mil float64
+
+	fmt.Scan(&mil)
+
+	km := mil * 1.6
+
+	fmt.Printf("%.1f\n", km)
+}
+
+```
+
+##### Output
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/konversi/Screenshot%202026-09-30%20153831.png
+
+#### Deskripsi
+langkah awal yaitu membaca soal lalu menentukan variable mil tipe data float64, membuat input untuk user dari variabel mil, buat print dari hasil rumus input dikali 1.6 (1 km) dan menghasilkan input sesuai pada soal di modul.
 
 ## Kesimpulan
-[Tuliskan kesimpulan yang menjawab tujuan praktikum berdasarkan hasil yang diperoleh.]
+Tujuan praktikum kali ini untuk mengenalkan aturan dasar penulisan struktur format,penulisan variabel, print untuk input serta output, merangkai rumus dari hasil variabel dan input serta selain itu cara push dan commit ke github beserta running nya.
