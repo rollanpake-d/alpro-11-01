@@ -131,11 +131,10 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/cacahuang/output.png
-
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/konversi_hari/Screenshot%202026-10-05%20203303.png
 
 #### Deskripsi
-Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel nilai uang tipe data integer, memberikan ruang input nominal uang di fmt.Scan, lalu menuliskan rumus dengan kombinasi metode pembagian bilangan bulat dan sisa hasil bagi yang menghasilkan output sesuai dengan soal.
+Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel jumlahhari dengan tipe data integer lalu memberikan input dari user pada fmt.Scan, lalu memasukkan rumus mulai dari urutan tahun menggunakan ketentuan hari pada tahun lalu bulan, minggu dan sisahari dengan operator pembagian bulan (/) serta modulus (%) yang menghasilkan output sesuai dengan soal.
 
 ### 2. [konversisuhu.go]
 
@@ -157,18 +156,18 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/Kalkulator/output.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/konversi_suhu/Screenshot%202026-10-05%20203532.png
 
 #### Deskripsi
-Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel a,b serta tambah,kali,bagi,kurang, dan sisa hasil bagi tipe data integer, memberikan ruang input 2 nominal uang di fmt.Scan, lalu menuliskan rumus dengan metode tambah,kali,bagi,kurang, dan sisa hasil yang menghasilkan output sesuai dengan soal.
+Proses awal mulai dari mengamati perintah pada soal lalu memberikan variabel celcius dan reamur dengan tipe data float64 ,lalu memberikan input yang akan diberikan dari user lalu menuliskan rumus variabel reamur = (4 per 5) dikali input dari celciusnya ,yang menghasilkan output sesuai dengan soal.
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
-### 1. "cacahuang.go"
-### 2. "kalkulator.go"
+### 1. "konversihari.go"
+### 2. "konversisuhu.go"
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan dasar penulisan struktur format,penulisan variabel, print untuk input serta output, merangkai rumus dari hasil variabel dan input serta selain itu cara push dan commit ke github beserta running nya.
+Tujuan praktikum kali ini untuk mengenalkan aturan dasar struktur penulisan variabel, tipe data yang digunakan serta kategori tipe datanya.
 
 ## Referensi
-1. [ariefyusufw@telkomuniversity.ac.id]. ([2025]). *[Mengenal Pemrograman Golang: Konsep, Sintaks, dan Praktiknya!]*. Diakses pada [27 september 2026] melalui [https://it.telkomuniversity.ac.id/mengenal-pemrograman-golang-konsep-sintaks-dan-praktiknya/]
+1. [Tipe & variabel] melalui https://ajarka.com/belajar/go/tipe-data
 
