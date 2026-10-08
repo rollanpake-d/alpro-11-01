@@ -13,10 +13,8 @@ func main() {
 	var tahun int
 	var bulan string
 
-	// Membaca input tahun dan nama bulan
 	fmt.Scan(&tahun, &bulan)
 
-	// Mengecek jumlah hari berdasarkan nama bulan yang valid
 	switch bulan {
 	case "Jan", "Mar", "Mei", "Jul", "Agu", "Okt", "Des":
 		fmt.Println(31)
@@ -29,7 +27,6 @@ func main() {
 			fmt.Println(28)
 		}
 	default:
-		// Jika nama bulan tidak sesuai format/validasi
 		fmt.Println("-")
 	}
 }
