@@ -30,13 +30,13 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/sisa/Screenshot%202026-09-30%20153655.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/tp/evaluasiekspresikontrol/Screenshot%202026-10-08%20102647.png
 
 
 #### Deskripsi
 langkah awal yaitu membaca soal lalu menentukan variable menggunakan huruf y dan x dengan tipe data integer, membuat input untuk user dari untuk menghasilkan variable y dan x, buat print dari hasil y modulo x dan menghasilkan input sesuai pada soal di modul
 
-### 2. bool.go
+### 2. Tracing: Evaluasi Pernyataan Kondisi Go
 
 ```go
 package main
@@ -44,43 +44,90 @@ package main
 import "fmt"
 
 func main() {
-	var inputBool bool
+	x := 10
+	y := 5
+	z := 15
+	result := 0
 
-	fmt.Scan(&inputBool)
+	if x > 5 {
+		if y < 10 {
+			result = x + y
+		} else {
+			result = x - y
+		}
+	}
 
-	fmt.Println(inputBool)
+	if z > 10 && x == 10 {
+		result += z
+	} else {
+		result = z - x
+	}
+
+	if x == 10 || y > 10 {
+		result += 5
+	} else if y == 5 && z > 10 {
+		result -= 5
+	} else {
+		result *= 2
+	}
+
+	if !(x < 15 && y < 10) {
+		result += 10
+	} else {
+		result -= 10
+	}
+
+	fmt.Println("Nilai akhir result:", result)
 }
 
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/bool/Screenshot%202026-09-30%20153746.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/tp/tracing/Screenshot%202026-10-08%20150304.png
 
 
 #### Deskripsi
 langkah awal yaitu membaca soal lalu menentukan variable menggunakan inputbool bool, membuat input untuk user dari variabel inputbool, buat print dari hasil inputbool dan menghasilkan input sesuai pada soal di modul.
 
-### 2. konversi.go
+### 3. Menentukan Jumlah Hari dalam Sebulan Berdasarkan Tahun dan Bulan Go
 
 ```go
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+func Kabisat(tahun int) bool {
+	return (tahun%400 == 0) || (tahun%4 == 0 && tahun%100 != 0)
+}
 
 func main() {
-	var mil float64
+	var tahun int
+	var bulan string
 
-	fmt.Scan(&mil)
+	fmt.Scan(&tahun, &bulan)
 
-	km := mil * 1.6
-
-	fmt.Printf("%.1f\n", km)
+	switch bulan {
+	case "Jan", "Mar", "Mei", "Jul", "Agu", "Okt", "Des":
+		fmt.Println(31)
+	case "Apr", "Jun", "Sep", "Nov":
+		fmt.Println(30)
+	case "Feb":
+		if Kabisat(tahun) {
+			fmt.Println(29)
+		} else {
+			fmt.Println(28)
+		}
+	default:
+		fmt.Println("-")
+	}
 }
 
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/konversi/Screenshot%202026-09-30%20153831.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/tp/jumlah%20hari/Screenshot%202026-10-08%20145010.png
 
 #### Deskripsi
 langkah awal yaitu membaca soal lalu menentukan variable mil tipe data float64, membuat input untuk user dari variabel mil, buat print dari hasil rumus input dikali 1.6 (1 km) dan menghasilkan input sesuai pada soal di modul.

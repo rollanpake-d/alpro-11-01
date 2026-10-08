@@ -51,7 +51,7 @@ https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan
 #### Deskripsi
 langkah awal yaitu membaca soal lalu menentukan variable menggunakan inputbool bool, membuat input untuk user dari variabel inputbool, buat print dari hasil inputbool dan menghasilkan input sesuai pada soal di modul.
 
-### 2. konversi.go
+### 3. konversi.go
 
 ```go
 package main
