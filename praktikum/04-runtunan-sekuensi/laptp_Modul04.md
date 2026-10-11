@@ -34,7 +34,7 @@ https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-seku
 
 
 #### Deskripsi
-langkah awal yaitu membaca soal lalu menentukan variable menggunakan huruf y dan x dengan tipe data integer, membuat input untuk user dari untuk menghasilkan variable y dan x, buat print dari hasil y modulo x dan menghasilkan input sesuai pada soal di modul
+Pada soal Go kali ini akan dilakukan pengecekkan output dari soal dan ketentuang yang sudah diberikan pada tipe data boolean yang akan menghasilkan jawaban hanya true dan false tergantung dari fmt.Println yang kita inputkan.
 
 ### 2. Tracing: Evaluasi Pernyataan Kondisi Go
 
@@ -87,7 +87,25 @@ https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-seku
 
 
 #### Deskripsi
-langkah awal yaitu membaca soal lalu menentukan variable menggunakan inputbool bool, membuat input untuk user dari variabel inputbool, buat print dari hasil inputbool dan menghasilkan input sesuai pada soal di modul.
+Pada soal Go kali ini sudah diberikan rangkaian code yang berfungsi untuk pengecekkan kondisi hasil melalui 4 blok if-else
+
+### A. Berapa nilai akhir dari variabel result setelah semua pernyataan kondisi dieksekusi? 
+hasilnya yaitu 25
+
+### B. Apa output yang dihasilkan oleh program? 
+hasilnya yaitu "Nilai akhir variabel result: 25"
+
+### C-1. Kondisi 1: Apakah kondisi x > 5 benar? Jika ya, apa yang terjadi selanjutnya? 
+iya, Langkah selanjutnya yaitu Program masuk ke dalam blok if lalu melakukan evaluasi y < 10. Nah karena y itu 5, jadi 5 < 10 nilainya true.
+
+### C-2. Kondisi 2: Apakah kondisi z > 10 && x == 10 benar? Bagaimana hal ini memengaruhi nilai result? 
+iya benar, Pengaruhnya di baris ke 20 result += z.
+
+### C-3. Kondisi 3: Apakah salah satu dari kondisi x == 10 || y > 10 benar? Apa yang terjadi? 
+sebenarnya ada 1 true dan 1 false nya, bagian x == 10 true dan y > 10 false tapi karena ini berbentuk || OR maka semua benar.
+
+### C-4. Kondisi 4: Bagaimana kondisi !(x < 15 && y < 10) dievaluasi? Apa dampaknya pada result? 
+sebenarnya jawaban pada tanda kurung dekat if bernilai true dan true tapi karena ada bentuk ! NOT maka nilainya true berubah jadi salah sehingga terpilih result -= 10
 
 ### 3. Menentukan Jumlah Hari dalam Sebulan Berdasarkan Tahun dan Bulan Go
 
@@ -130,7 +148,7 @@ func main() {
 https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/tp/jumlah%20hari/Screenshot%202026-10-08%20145010.png
 
 #### Deskripsi
-langkah awal yaitu membaca soal lalu menentukan variable mil tipe data float64, membuat input untuk user dari variabel mil, buat print dari hasil rumus input dikali 1.6 (1 km) dan menghasilkan input sesuai pada soal di modul.
+langkah awal yaitu membaca soal lalu menentukan variable tahun tipe data int dan bulan tipe data string, lalu memberikan input untuk user berupa tahun dan bulan, membagi bulan sesuai dengan kategori 31 hari dan kategori 30 hari, memberikan percabangan pada bagian khusus tahun kabisat bulan april dengan modulus, lalu memberikan default untuk memberikan cadangan bila data yang diinput diluar dari ketentuang yang sudah ditentukan maka akan diberikan output "-" dan tidak memunculkan hasil
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan dasar penulisan struktur format,penulisan variabel, print untuk input serta output, merangkai rumus dari hasil variabel dan input serta selain itu cara push dan commit ke github beserta running nya.
+Tujuan praktikum kali ini untuk mengenalkan aturan penulisan if else percabangan ketika suatu kondisi tidak memenuhi ketentuan pertama maka akan dialihkan ke kondisi yang lainnya.

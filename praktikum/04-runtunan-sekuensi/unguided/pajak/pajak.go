@@ -1,1 +1,8 @@
-package pajak
+package main
+
+import "fmt"
+
+func main() {
+
+	
+}

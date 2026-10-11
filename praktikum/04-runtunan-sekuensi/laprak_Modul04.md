@@ -1,68 +1,110 @@
-# <h1 align="center">Laporan Praktikum Modul [03] - [tipe-data-dan-instruksi-dasar-go]</h1>
+# <h1 align="center">Laporan Praktikum Modul [04] - [runtunan-sekuensi]</h1>
 <p align="center">[Paschalis Rolland Setianto Nugroho] - [109092600011]</p>
 
 ## Dasar Teori
 
-### A. [Tipe data Integer, Real, Boolean, Char]
-Pada bagian ini menjelaskan pengertian tipe data Integer, ReaL, Boolean, dan Char serta menjelaskan fungsi dan beberapa kategori dalam tipe data integer, real, dan character 
+#### A. [Pengertian Runtunan / Sekuensi]
+Runtunan atau sekuensi merupakan struktur kontrol dalam algoritma pemrograman yang melakukan proses bertahap dari perintah bagian atas hingga bagian bawah secara berurutan tanpa melewatkan satu perintah, sehingga apabila ada perpindahan perintah maka output bisa terganti atau justru menghasilkan error.
 
-#### 1. [Judul Sub-topik 1, Integer]
-Pada integer ada int8, int16, int32, dan int64 kemudian uint8, uint16, uint32, dan uint64, pada kategori int dan uint tersebut berbeda pada rentang bitnya. tipe ini untuk menyimpan bilangan bulat ditandai dengan adanya tipe data "int".
+#### B. [Ciri-Ciri Runtunan / Sekuensi]
+1. Program diproses secara urut dari paling atas hingga paling bawah tanpa melewatkan satu perintah pun.
+2. Ketika ada perpindahan/pertukaran perintah maka bisa menyebabkan output yang berbeda bahkan bisa error.
+3. Tidak bisa menggunakan perulangan atau percabangan.
+4. Perintah hanya bisa dijalankan satu kali saja.
 
-#### 2. [Judul Sub-topik 2, Real]
-Pada real ada float32 dan float64. tipe ini untuk menyimpan bilangan pecahan ditandai dengan adanya tipe data "float" diikuti dengan kategori bit yang sedang dibutuhkan.
+#### C. [Kegunaan Runtunan / Sekuensi]
+1. Untuk menampilkan Biodata.
+2. Untuk mengkonversi rumus matematis yang sederhana (luas, keliling, konversi satuan)
+3. Menukar 2 nilai dua variabel
 
-#### 3. [Judul Sub-topik 3, Boolean]
-Pada boolean tipe ini untuk menyimpan variabel logika (true & false) ditandai dengan adanya tipe data "bool" 
 
-#### 4. [Judul Sub-topik 4, Character]
-Pada character ada tipe data byte, rune, dan string. tipe ini untuk menyimpan variabel sekumpulan teks atau karakter ditandai dengan adanya tipe data "char".
 
 ## Guided
 
-### 1. [kasir.go]
+### 1. [grade.go]
 
 ```go
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"os"
+	"fmt"
+)
 
 func main() {
+	var nama string
+	var nilai float64
+	var grade string
 
-	var x int
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
 
-	fmt.Println("Masukkan Nominal: ")
-	fmt.Scan(&x)
+	nama = scanner.Text()
 
-	var SepuluhRibu int = x / 10000
-	var sisa int = x % 10000
+	fmt.Scan(&nilai)
 
-	var LimaRibu int = sisa / 5000
-	sisa = sisa % 5000
+	if nilai >= 90 && nilai <= 100 {
+		grade = "A"
+	} else if nilai >= 80 && nilai < 90 {
+		grade = "B"
+	} else if nilai >= 70 && nilai < 80 {
+		grade = "C"
+	} else if nilai >= 60 && nilai < 70 {
+	    grade = "D"
+	} else {
+		grade = "F"
+	}
+	
+	fmt.Printf("%s mendapatkan nilai %s\n", nama, grade)
 
-	var Seribuan int = sisa / 1000
-
-	fmt.Println(SepuluhRibu, LimaRibu, Seribuan)
 }
 ```
 #### Deskripsi
 Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel x dalam tipe data integer, memberikan input variabel dengan fmt.Scan dari user, lalu menuliskan rumus pecahan uang menggunakan pembagian bilangan bulat serta modulus dan menghasilkan output sesuai dengan soal.
 
-### 2. [konversi.go]
+### 2. [klasifikasi.go]
 
 ```go
 package main
 
-import "fmt"
+import (
+	"fmt" // Hanya memerlukan fmt untuk keperluan input dan output
+)
 
 func main() {
+	// Pendefinisian variabel secara eksplisit beserta tipe datanya
+	var usia int
+	var gaji int
+	var keterangan string
 
-	var celcius float64
+	// Membaca dua masukan berupa angka dari pengguna (usia dan gaji)
+	// fmt.Scan otomatis memisahkan input berdasarkan spasi atau baris baru (enter)
+	fmt.Scan(&usia)
+	fmt.Scan(&gaji)
 
-	fmt.Print("Masukkan Suhu: ")
-	fmt.Scanln(&celcius)
+	// Menggunakan switch tanpa ekspresi.
+	// Cara kerjanya sama persis seperti deretan if - else if.
+	// Program akan mengecek dari atas ke bawah, dan menjalankan case pertama yang bernilai benar (true).
+	switch {
+	case usia < 18:
+		keterangan = "Masih sekolah"
+	case usia >= 18 && usia <= 25 && gaji >= 50:
+		keterangan = "Muda sukses"
+	case usia >= 18 && usia <= 25 && gaji < 50:
+		keterangan = "Masih belajar hidup"
+	case usia >= 26 && usia <= 40 && gaji >= 100:
+		keterangan = "Pekerja mapan"
+	case usia >= 26 && usia <= 40 && gaji < 100:
+		keterangan = "Perlu perbaikan karier"
+	case usia > 40 && gaji >= 150:
+		keterangan = "Profesional berpengalaman"
+	case usia > 40 && gaji < 150:
+		keterangan = "Perlu evaluasi finansial"
+	}
 
-	fmt.Println(celcius + 273)
+	// Menampilkan hasil klasifikasi ke layar
+	fmt.Println(keterangan)
 }
 
 
@@ -71,27 +113,77 @@ func main() {
 Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel nama tipe data float64 lalu memberikan input dari user dengan hasil yang diperoleh dari rumus hasil input ditambah 273 yang menghasilkan output sesuai dengan soal.
 
 
-### 3. [tukar.go]
+### 3. [penilaian.go]
 
 ```go
 package main
 
-import "fmt"
+import (
+	"bufio" // Digunakan untuk membaca masukan string yang memiliki spasi (seperti nama lengkap)
+	"fmt"
+	"os" // Menyediakan akses ke sistem operasi, dalam hal ini os.Stdin yang merepresentasikan keyboard
+)
 
 func main() {
+	// Pendefinisian variabel secara eksplisit beserta tipe datanya
+	var pilihan int
+	var nama string
+	var nilai float64
+	var grade string
 
-	var x, y, z int
+	// Menampilkan cetakan Menu ke layar
+	fmt.Println("============= Menu =============")
+	fmt.Println("1. Sistem penilaian")
+	fmt.Println("0. Keluar")
+	fmt.Print("Pilih opsi: ")
 
-	fmt.Scan(&x, &y, &z)
+	// Membaca masukan pilihan (angka).
+	// Kita menggunakan Scanln agar saat user menekan 'Enter', karakter enter tersebut
+	// ikut diolah/dibersihkan dan tidak melompat (mengganggu) masukan nama di bawahnya.
+	fmt.Scanln(&pilihan)
 
-	temp := x
-	x = z
-	z = y
-	y = temp
+	// Percabangan/Sekuensi bersyarat berdasarkan input pengguna
+	if pilihan == 1 {
+		fmt.Print("Masukkan nama siswa: ")
 
-	fmt.Println(x, y, z)
+		// Membuat alat pembaca (scanner) baru yang mengambil masukan dari keyboard
+		scanner := bufio.NewScanner(os.Stdin)
+
+		// Proses membaca masukan dari pengguna sampai tombol Enter ditekan
+		scanner.Scan()
+
+		// Mengambil teks (nama) yang baru saja dibaca dan menyimpannya ke variabel
+		nama = scanner.Text()
+
+		fmt.Print("Masukkan nilai siswa: ")
+		fmt.Scanln(&nilai)
+
+		// Menentukan grade nilai
+		if nilai >= 90 && nilai <= 100 {
+			grade = "A"
+		} else if nilai >= 80 && nilai < 90 {
+			grade = "B"
+		} else if nilai >= 70 && nilai < 80 {
+			grade = "C"
+		} else if nilai >= 60 && nilai < 70 {
+			grade = "D"
+		} else {
+			grade = "F"
+		}
+
+		// %s adalah format (placeholder) untuk mencetak data bertipe string
+		// %s pertama akan digantikan oleh isi variabel 'nama', %s kedua oleh 'grade'
+		fmt.Printf("%s mendapatkan nilai %s\n", nama, grade)
+
+	} else if pilihan == 0 {
+		// Dijalankan jika pengguna mengetik 0
+		fmt.Println("Keluar dari program.")
+
+	} else {
+		// Dijalankan jika pengguna mengetik angka selain 1 dan 0
+		fmt.Println("Pilihan tidak valid.")
+	}
 }
-
 
 ```
 #### Deskripsi
@@ -101,33 +193,45 @@ Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan varia
 
 ## Unguided
 
-### 1. [konversihari.go]
+### 1. [grade.go]
 
 ```go
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"os"
+	"fmt"
+)
 
 func main() {
+	var nama string
+	var nilai float64
+	var grade string
 
-	var jumlahhari int
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
 
-	fmt.Scan(&jumlahhari)
+	nama = scanner.Text()
 
-	tahun := jumlahhari / 360
-	sisa := jumlahhari % 360
+	fmt.Scan(&nilai)
 
-	bulan := sisa / 30
-	sisa = sisa % 30
+	switch {
+	case nilai >= 90 && nilai <= 100:
+		grade = "A"
+	case nilai >= 80 && nilai < 90:
+		grade = "B"
+	case nilai >= 70 && nilai < 80:
+		grade = "C"
+	case nilai >= 60 && nilai < 70:
+		grade = "D"
+	default:
+		grade = "F"
+	}
+	
+	fmt.Printf("%s mendapatkan nilai %s\n", nama, grade)
 
-	minggu := sisa / 7
-	sisa = sisa % 7
-
-	sisahari := sisa % 7
-
-	fmt.Println(jumlahhari, "=", tahun, "tahun", bulan, "bulan", minggu, "minggu", sisahari, "hari")
 }
-
 ```
 
 ##### Output
@@ -136,7 +240,7 @@ https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan
 #### Deskripsi
 Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel jumlahhari dengan tipe data integer lalu memberikan input dari user pada fmt.Scan, lalu memasukkan rumus mulai dari urutan tahun menggunakan ketentuan hari pada tahun lalu bulan, minggu dan sisahari dengan operator pembagian bulan (/) serta modulus (%) yang menghasilkan output sesuai dengan soal.
 
-### 2. [konversisuhu.go]
+### 2. [pajak.go]
 
 ```go
 package main
