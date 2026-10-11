@@ -235,7 +235,7 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/konversi_hari/Screenshot%202026-10-05%20203303.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/modif_grade/Screenshot%202026-10-11%20133008.png
 
 #### Deskripsi
 Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel jumlahhari dengan tipe data integer lalu memberikan input dari user pada fmt.Scan, lalu memasukkan rumus mulai dari urutan tahun menggunakan ketentuan hari pada tahun lalu bulan, minggu dan sisahari dengan operator pembagian bulan (/) serta modulus (%) yang menghasilkan output sesuai dengan soal.
