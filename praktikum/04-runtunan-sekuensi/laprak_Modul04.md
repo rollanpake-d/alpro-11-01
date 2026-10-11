@@ -61,7 +61,7 @@ func main() {
 }
 ```
 #### Deskripsi
-Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel x dalam tipe data integer, memberikan input variabel dengan fmt.Scan dari user, lalu menuliskan rumus pecahan uang menggunakan pembagian bilangan bulat serta modulus dan menghasilkan output sesuai dengan soal.
+Pada tugas guided ini diberikan soal yang berfungsi untuk memberikan hasil nama serta grade berdasarkan input yang diberikan dari user, menggunakan else if serta package bufio dan os yang baru pernah digunakan pada tugas kali ini.
 
 ### 2. [klasifikasi.go]
 
@@ -110,7 +110,7 @@ func main() {
 
 ```
 #### Deskripsi
-Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel nama tipe data float64 lalu memberikan input dari user dengan hasil yang diperoleh dari rumus hasil input ditambah 273 yang menghasilkan output sesuai dengan soal.
+Pada tugas guided kali ini diberikan soal untuk memberikan output keterangan berdasarkan klasifikasi dari input usia dan gaji dengan menggunakan switch case, dimana hal ini bisa dikatakan lebih simple dari model else if karena switch case tidak perlu penambahan tanda kurung "()"
 
 
 ### 3. [penilaian.go]
@@ -187,8 +187,7 @@ func main() {
 
 ```
 #### Deskripsi
-Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel x, y, z lalu memberikan input dari user yang menghasilkan output dari hasil rumus nilai x menghasilkan nilai z, nilai z menghasilkan nilai y, nilai y menghasilkan nilai x dan menghasilkan output sesuai dengan soal.
-
+Pada soal guided kali ini diberikan persoalan untuk menyelesaikan masalah menentukan grade siswa berdasarkan input nilai, dimana sistem ini akan menyeleksi bagian yang sesuai dengan ketentuan yang ada.
 
 
 ## Unguided
@@ -238,7 +237,7 @@ func main() {
 https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/modif_grade/Screenshot%202026-10-11%20133008.png
 
 #### Deskripsi
-Proses awal mulai dari mengamati perintah pada soal lalu diawal menentukan variabel jumlahhari dengan tipe data integer lalu memberikan input dari user pada fmt.Scan, lalu memasukkan rumus mulai dari urutan tahun menggunakan ketentuan hari pada tahun lalu bulan, minggu dan sisahari dengan operator pembagian bulan (/) serta modulus (%) yang menghasilkan output sesuai dengan soal.
+Pada soal unguided kali ini diberikan persoalan untuk memodifikasi dari soal guided 1 (grade.go) untuk menggunakan model switch case (bukan else if) bisa dibilang switch case ini lebih simple karena tidak perlu ada penambahan tanda kurung "()"
 
 ### 2. [pajak.go]
 
@@ -248,13 +247,23 @@ package main
 import "fmt"
 
 func main() {
-	var celcius, reamur float64
+	var pajak, penghasilan float64
 
-	fmt.Scan(&celcius)
+	fmt.Scan(&penghasilan)
 
-	reamur = (4.0 / 5.0) * celcius
+	if penghasilan <= 50 {
+	 pajak = penghasilan * 0.05 
 
-	fmt.Println(reamur)
+	} else if penghasilan > 50 && penghasilan <= 100 {
+		pajak = (0.05 * 50) + (0.1 * (penghasilan - 50)) 
+
+	} else if penghasilan > 100 && penghasilan <= 200 {
+		pajak = (0.05 * 50) + (0.1 * 50) + (0.15 * (penghasilan - 100))
+	
+	} else if penghasilan > 200 {
+		pajak = (0.05 * 50) + (0.1 * 50) + (0.15 * 100) + (0.2 * (penghasilan - 200))
+	}
+	fmt.Println(pajak)
 }
 
 ```
@@ -263,15 +272,14 @@ func main() {
 https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/pajak/Screenshot%202026-10-11%20181946.png
 
 #### Deskripsi
-Proses awal mulai dari mengamati perintah pada soal lalu memberikan variabel celcius dan reamur dengan tipe data float64 ,lalu memberikan input yang akan diberikan dari user lalu menuliskan rumus variabel reamur = (4 per 5) dikali input dari celciusnya ,yang menghasilkan output sesuai dengan soal.
+Pada soal unguided kali ini diberikan persoalan untuk membuat sebuah program untuk menghitung pajak berdasarkan gaji, dimana setiap kelipatan 50 juta akan ada kenaikan 5% dari nilai pajak awal, berfungsi untuk menentukan besaran output yang lebih akurat sesuai dengan rumus ketentuan yang ada.
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
-### 1. "konversihari.go"
-### 2. "konversisuhu.go"
+### 1. "modif_grade.go"
+### 2. "pajak.go"
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan dasar struktur penulisan variabel, tipe data yang digunakan serta kategori tipe datanya.
+Tujuan praktikum kali ini untuk mengenalkan aturan else if, switch case serta packages bufio, os, dan algoritma yang lebih komples namun harus lebih terstruktur.
 
 ## Referensi
-1. [Tipe & variabel] melalui https://ajarka.com/belajar/go/tipe-data
-
+1. Modul 04 - Runtunan / Sekuensi.PDF  - sumber: Modul Informatics lab,Telkom University.
