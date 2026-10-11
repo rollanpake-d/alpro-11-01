@@ -260,7 +260,7 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/konversi_suhu/Screenshot%202026-10-05%20203532.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/pajak/Screenshot%202026-10-11%20181946.png
 
 #### Deskripsi
 Proses awal mulai dari mengamati perintah pada soal lalu memberikan variabel celcius dan reamur dengan tipe data float64 ,lalu memberikan input yang akan diberikan dari user lalu menuliskan rumus variabel reamur = (4 per 5) dikali input dari celciusnya ,yang menghasilkan output sesuai dengan soal.
