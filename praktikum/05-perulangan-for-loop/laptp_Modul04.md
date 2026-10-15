@@ -25,13 +25,13 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/tp/evaluasiekspresikontrol/Screenshot%202026-10-08%20102647.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/tp/ganjil/Screenshot%202026-10-15%20070935.png
 
 
 #### Deskripsi
-Pada soal Go kali ini akan dilakukan pengecekkan output dari soal dan ketentuang yang sudah diberikan pada tipe data boolean yang akan menghasilkan jawaban hanya true dan false tergantung dari fmt.Println yang kita inputkan.
+Pada soal kali ini diberikan inisialisasi nilai 1 lalu kondisi i lebih kecil atau sama dengan hasil input(n) lalu post statement dengan menambahkan digit dari angka awal(misal 1 akan ditambah 2 untuk membentuk angka ganjil) lalu dibawahnya ada fmt.Println dengan format verb dari %d untuk menyatakan variabel dari hasil i tersebut lalu ada sum untuk menjumlahkan nilai
 
-### 2. Tracing: Evaluasi Pernyataan Kondisi Go
+### 2. perkalian.go
 
 ```go
 package main
@@ -51,72 +51,11 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/tp/tracing/Screenshot%202026-10-08%20150304.png
+https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/tp/perkalian/Screenshot%202026-10-15%20071156.png
 
 
 #### Deskripsi
-Pada soal Go kali ini sudah diberikan rangkaian code yang berfungsi untuk pengecekkan kondisi hasil melalui 4 blok if-else
-
-### A. Berapa nilai akhir dari variabel result setelah semua pernyataan kondisi dieksekusi? 
-hasilnya yaitu 25
-
-### B. Apa output yang dihasilkan oleh program? 
-hasilnya yaitu "Nilai akhir variabel result: 25"
-
-### C-1. Kondisi 1: Apakah kondisi x > 5 benar? Jika ya, apa yang terjadi selanjutnya? 
-iya, Langkah selanjutnya yaitu Program masuk ke dalam blok if lalu melakukan evaluasi y < 10. Nah karena y itu 5, jadi 5 < 10 nilainya true.
-
-### C-2. Kondisi 2: Apakah kondisi z > 10 && x == 10 benar? Bagaimana hal ini memengaruhi nilai result? 
-iya benar, Pengaruhnya di baris ke 20 result += z.
-
-### C-3. Kondisi 3: Apakah salah satu dari kondisi x == 10 || y > 10 benar? Apa yang terjadi? 
-sebenarnya ada 1 true dan 1 false nya, bagian x == 10 true dan y > 10 false tapi karena ini berbentuk || OR maka semua benar.
-
-### C-4. Kondisi 4: Bagaimana kondisi !(x < 15 && y < 10) dievaluasi? Apa dampaknya pada result? 
-sebenarnya jawaban pada tanda kurung dekat if bernilai true dan true tapi karena ada bentuk ! NOT maka nilainya true berubah jadi salah sehingga terpilih result -= 10
-
-### 3. Menentukan Jumlah Hari dalam Sebulan Berdasarkan Tahun dan Bulan Go
-
-```go
-package main
-
-import (
-	"fmt"
-)
-
-func Kabisat(tahun int) bool {
-	return (tahun%400 == 0) || (tahun%4 == 0 && tahun%100 != 0)
-}
-
-func main() {
-	var tahun int
-	var bulan string
-
-	fmt.Scan(&tahun, &bulan)
-
-	switch bulan {
-	case "Jan", "Mar", "Mei", "Jul", "Agu", "Okt", "Des":
-		fmt.Println(31)
-	case "Apr", "Jun", "Sep", "Nov":
-		fmt.Println(30)
-	case "Feb":
-		if Kabisat(tahun) {
-			fmt.Println(29)
-		} else {
-			fmt.Println(28)
-		}
-	default:
-		fmt.Println("-")
-	}
-}
-
-```
-
-##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/tp/jumlah%20hari/Screenshot%202026-10-08%20145010.png
-
-#### Deskripsi
-langkah awal yaitu membaca soal lalu menentukan variable tahun tipe data int dan bulan tipe data string, lalu memberikan input untuk user berupa tahun dan bulan, membagi bulan sesuai dengan kategori 31 hari dan kategori 30 hari, memberikan percabangan pada bagian khusus tahun kabisat bulan april dengan modulus, lalu memberikan default untuk memberikan cadangan bila data yang diinput diluar dari ketentuang yang sudah ditentukan maka akan diberikan output "-" dan tidak memunculkan hasil
+pada kode kali ini diberikan 2 input a dan b, lalu user memberikan input a dan b tersebut, selanjutnya pakai inisialisasi 1 untuk nilai awal dan kondisi 1 lebih kecil atau sama dengan b dan melakukan increment untuk menambahkan nilai variabel pada iterasi, lalu print hasil i tadi menggunakan format verb %d * %d untuk menampung input i tadi(bukan untuk menuliskan rumus karena fungsi tanda "" untuk mengapit teks, lalu ada tanda \n setelah sudah ada hasil maka akan dipindah ke baris baru, lalu ada a masuk pada %d pertama dan i masuk pada %d kedua dan a * i masuk ke %d setelah =
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan penulisan if else percabangan ketika suatu kondisi tidak memenuhi ketentuan pertama maka akan dialihkan ke kondisi yang lainnya.
+Tujuan praktikum kali ini untuk mengenalkan aturan penulisan for, inisialisasi, kondisi, dan post statement
