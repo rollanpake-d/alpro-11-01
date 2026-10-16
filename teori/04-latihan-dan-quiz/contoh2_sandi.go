@@ -1,16 +1,18 @@
-package main
+package main​
 
-import "fmt"
+import "fmt"​
 
-func main() {
-	var banyakbilangan, bilangan, angka_ke1, angka_ke4, hasil int
+func main(){​
 
-	fmt.Scan(&banyakbilangan)
-	for bilangan = 1; bilangan =< banyakbilangan; bilangan++ {
-		fmt.Scan(&bilangan)
-		angka_ke1 = bilangan / 1000
-		angka_ke4 = bilangan % 10
-		hasil += angka_ke1 + angka_ke4
-	}
-	fmt.Println(hasil)
-}
+    var n, i, bilangan, jumlah, d1, d4 int​
+
+    fmt.Scan(&n)​
+    jumlah = 0​
+
+    for i = 1; i <= n; i++ {​
+        fmt. Scan(&bilangan)​
+        d1 = bilangan / 1000​
+        d4 = bilangan % 10​
+        jumlah += d1 + d4​
+    }   ​
+}​
