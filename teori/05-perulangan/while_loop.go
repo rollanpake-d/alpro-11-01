@@ -8,10 +8,10 @@ func main() {
     fmt.Scan(&N)
 	
     i := 1
-    // Struktur while-loop di Go menggunakan keyword 'for' dengan kondisi
+    // dengan kondisi
     for i <= N {
         fmt.Printf("%d ", i)
-        i++ // Increment nilai i agar perulangan bisa berhenti
+        i++ // Increment nilai i biar perulangan berhenti
     }
     fmt.Println()
 }
