@@ -82,7 +82,7 @@ func main () {
 
 ```
 #### Deskripsi
-Pada tugas guided ini diberikan soal yang berfungsi untuk memberikan hasil nama serta grade berdasarkan input yang diberikan dari user, menggunakan else if serta package bufio dan os yang baru pernah digunakan pada tugas kali ini.
+belum update
 
 ### 2. [tabungan.go]
 
@@ -112,7 +112,7 @@ func main () {
 
 ```
 #### Deskripsi
-Pada tugas guided kali ini diberikan soal untuk memberikan output keterangan berdasarkan klasifikasi dari input usia dan gaji dengan menggunakan switch case, dimana hal ini bisa dikatakan lebih simple dari model else if karena switch case tidak perlu penambahan tanda kurung "()"
+belum update
 
 
 ### 3. [terbesar.go]
@@ -144,7 +144,7 @@ func main () {
 }
 ```
 #### Deskripsi
-Pada soal guided kali ini diberikan persoalan untuk menyelesaikan masalah menentukan grade siswa berdasarkan input nilai, dimana sistem ini akan menyeleksi bagian yang sesuai dengan ketentuan yang ada.
+belum update
 
 
 ## Unguided
@@ -194,8 +194,7 @@ func main() {
 https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/modif_grade/Screenshot%202026-10-11%20133008.png
 
 #### Deskripsi
-Pada soal unguided kali ini diberikan persoalan untuk memodifikasi dari soal guided 1 (grade.go) untuk menggunakan model switch case (bukan else if) bisa dibilang switch case ini lebih simple karena tidak perlu ada penambahan tanda kurung "()"
-
+belum update
 ### 2. [pajak.go]
 
 ```go
@@ -229,14 +228,14 @@ func main() {
 https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/pajak/Screenshot%202026-10-11%20181946.png
 
 #### Deskripsi
-Pada soal unguided kali ini diberikan persoalan untuk membuat sebuah program untuk menghitung pajak berdasarkan gaji, dimana setiap kelipatan 50 juta akan ada kenaikan 5% dari nilai pajak awal, berfungsi untuk menentukan besaran output yang lebih akurat sesuai dengan rumus ketentuan yang ada.
+belum update
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
 ### 1. "modif_grade.go"
 ### 2. "pajak.go"
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan else if, switch case serta packages bufio, os, dan algoritma yang lebih komples namun harus lebih terstruktur.
+belum update
 
 ## Referensi
 1. Modul 04 - Runtunan / Sekuensi.PDF  - sumber: Modul Informatics lab,Telkom University.
