@@ -3,16 +3,16 @@
 
 ## Dasar Teori
 
-#### A. [Pengertian Runtunan / Sekuensi]
+#### A. [belum update semua isi]
 Runtunan atau sekuensi merupakan struktur kontrol dalam algoritma pemrograman yang melakukan proses bertahap dari perintah bagian atas hingga bagian bawah secara berurutan tanpa melewatkan satu perintah, sehingga apabila ada perpindahan perintah maka output bisa terganti atau justru menghasilkan error.
 
-#### B. [Ciri-Ciri Runtunan / Sekuensi]
+#### B. [belum update semua isi]
 1. Program diproses secara urut dari paling atas hingga paling bawah tanpa melewatkan satu perintah pun.
 2. Ketika ada perpindahan/pertukaran perintah maka bisa menyebabkan output yang berbeda bahkan bisa error.
 3. Tidak bisa menggunakan perulangan atau percabangan.
 4. Perintah hanya bisa dijalankan satu kali saja.
 
-#### C. [Kegunaan Runtunan / Sekuensi]
+#### C. [belum update semua isi]
 1. Untuk menampilkan Biodata.
 2. Untuk mengkonversi rumus matematis yang sederhana (luas, keliling, konversi satuan)
 3. Menukar 2 nilai dua variabel
