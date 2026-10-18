@@ -3,19 +3,19 @@
 
 ## Dasar Teori
 
-#### A. [belum update semua isi]
-Runtunan atau sekuensi merupakan struktur kontrol dalam algoritma pemrograman yang melakukan proses bertahap dari perintah bagian atas hingga bagian bawah secara berurutan tanpa melewatkan satu perintah, sehingga apabila ada perpindahan perintah maka output bisa terganti atau justru menghasilkan error.
+### A. [Perulangan]
+Perulangan adalah struktur control dalam bahasa pemrograman Go, perulangan akan selalu diproses berulang disaat suatu kondisi masih terpenuhi pada satu blok kode.
 
-#### B. [belum update semua isi]
-1. Program diproses secara urut dari paling atas hingga paling bawah tanpa melewatkan satu perintah pun.
-2. Ketika ada perpindahan/pertukaran perintah maka bisa menyebabkan output yang berbeda bahkan bisa error.
-3. Tidak bisa menggunakan perulangan atau percabangan.
-4. Perintah hanya bisa dijalankan satu kali saja.
+#### 1. [For Loop]
+Perulangan For Loop, ada 4 bentuk yaitu For dengan 3 komponen (inisialisasi, kondisi, dan post statement), lalu For hanya dengan kondisi, lalu For tanpa kondisi, serta For dengan range.
 
-#### C. [belum update semua isi]
-1. Untuk menampilkan Biodata.
-2. Untuk mengkonversi rumus matematis yang sederhana (luas, keliling, konversi satuan)
-3. Menukar 2 nilai dua variabel
+- Pada For dengan 3 komponen, ditandai dengan adanya awal inisialisasi atau variabel paling awal (belum pernah dideskripsikan) setelahnya ada kondisi biasanya ditandai dengan >=, <=, terakhir ada post statement untuk memberikan iterasi sesuai dengan ketentuan dari kondisi
+- Pada For hanya dengan kondisi, penggunaan inisialisasinya digunakan untuk semua bagian pada code keseluruhan, berbeda dengan For 3 Komponen dimana setiap blok kode bisa mempunyai inisialisasi lebih dari satu.
+- Pada For tanpa kondisi, menggunakan "break" untuk menghentikan program pada kondisi tertentu
+- Pada For range, digunakan untuk tempat untuk mengiterasi variabel (sekumpulan data)  yang sudah ada yang nantinya akan di keluarkan secara berurutan mulai dari variabel yang tertera pada code program pertama hingga terakhir secara urut tanpa terlewat satupun
+
+#### 2. [Nested For Loop]
+Pada Nested For Loop atau For Bersarang, akan digunakan for tetapi didalam blok kode tersebut terdapat for lain, bisa terdapat 2 atau 3 bahkan lebih for didalamnya.
 
 
 
@@ -82,7 +82,7 @@ func main () {
 
 ```
 #### Deskripsi
-belum update
+Pada soal ini berfungsi untuk menyelesaikan masalah dari sebuah bioskop yang ingin mengetahui perhitungan total pendapatan dari transaksi yang telah diinputkan transaksi melakukan perhitungan berdasarkan jenis film, hari pemutaran, dan jumlah tiket yang dibeli dimana jika setiap satu kali transaksi lebih dari 5 tiket akan diberikan diskon sebesar 10% dari total harga sebelum diskon.
 
 ### 2. [tabungan.go]
 
@@ -112,8 +112,7 @@ func main () {
 
 ```
 #### Deskripsi
-belum update
-
+Pada soal ini berfungsi untuk menyelesaikan masalah dari persoalan tabungan yang diinputkan seseorang dimana program akan menghitung nilai uang pertama hingga hari berikutnya yang telah ditentukan.
 
 ### 3. [terbesar.go]
 
@@ -144,49 +143,38 @@ func main () {
 }
 ```
 #### Deskripsi
-belum update
+Pada soal ini berfungsi untuk menyelesaikan masalah dari persoalan pemilihan satu angka yang bernilai paling besar diantara angka yang lain, jumlah banyaknya angka akan disesuaikan menurut input yang diberikan oleh usernya.
 
 
 ## Unguided
 
-### 1. [grade.go]
+### 1. [prima.go]
 
 ```go
 package main
 
-import (
-	"bufio"
-	"os"
-	"fmt"
-)
+import "fmt"
 
-func main() {
-	var nama string
-	var nilai float64
-	var grade string
+func main () {
+	var n int
+	var status string
+	fmt.Scan(&n)
 
-	scanner := bufio.NewScanner(os.Stdin)
-	scanner.Scan()
+	jumlahFaktor := 0
 
-	nama = scanner.Text()
+	for i := 1; i <= n; i++ {
+		if n % i == 0 {
+			fmt.Print(i, " ")
+			jumlahFaktor++
+		} 
+	} 
 
-	fmt.Scan(&nilai)
-
-	switch {
-	case nilai >= 90 && nilai <= 100:
-		grade = "A"
-	case nilai >= 80 && nilai < 90:
-		grade = "B"
-	case nilai >= 70 && nilai < 80:
-		grade = "C"
-	case nilai >= 60 && nilai < 70:
-		grade = "D"
-	default:
-		grade = "F"
+	if jumlahFaktor == 2{
+		status = "Ya"
+	} else if jumlahFaktor != 2 {
+		status = "Tidak"
 	}
-	
-	fmt.Printf("%s mendapatkan nilai %s\n", nama, grade)
-
+	fmt.Println(status)
 }
 ```
 
@@ -195,7 +183,8 @@ https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-seku
 
 #### Deskripsi
 belum update
-### 2. [pajak.go]
+
+### 2. [ecct.go]
 
 ```go
 package main
@@ -231,8 +220,8 @@ https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-seku
 belum update
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
-### 1. "modif_grade.go"
-### 2. "pajak.go"
+### 1. "prima.go"
+### 2. "ecct.go"
 
 ## Kesimpulan
 belum update
