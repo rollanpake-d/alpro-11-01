@@ -179,10 +179,10 @@ func main () {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/modif_grade/Screenshot%202026-10-11%20133008.png
+https://github.com/rollanpake-d/alpro-11-01/blob/818e46248198c3ab801e582561b7788f2dc355c9/praktikum/05-perulangan-for-loop/unguided/prima/image.png
 
 #### Deskripsi
-belum update
+Pada soal ini berfungsi untuk menyelesaikan persoalan sebuah pemfaktoran, dimana terdapat variabel n yang diberikan oleh user dan bagian for untuk mengecek jika variabel n habis dibagi i maka akan ditambahkan nilai 1, pada bagian bawahnya di cek bila terdapat hanya 2 bilangan maka status akan Ya jika tidak hanya 2 maka status akan Tidak
 
 ### 2. [ecct.go]
 
@@ -191,40 +191,44 @@ package main
 
 import "fmt"
 
-func main() {
-	var pajak, penghasilan float64
+func main () {
+	var m int
+	var P, V, GA, FS, CI, TC int
+	var status string
 
-	fmt.Scan(&penghasilan)
+	fmt.Scan(&m)
 
-	if penghasilan <= 50 {
-	 pajak = penghasilan * 0.05 
+	jumlahSertifikat := 0
 
-	} else if penghasilan > 50 && penghasilan <= 100 {
-		pajak = (0.05 * 50) + (0.1 * (penghasilan - 50)) 
+	for i := 1; i <= m; i++ {
 
-	} else if penghasilan > 100 && penghasilan <= 200 {
-		pajak = (0.05 * 50) + (0.1 * 50) + (0.15 * (penghasilan - 100))
-	
-	} else if penghasilan > 200 {
-		pajak = (0.05 * 50) + (0.1 * 50) + (0.15 * 100) + (0.2 * (penghasilan - 200))
+		fmt.Scan(&P, &V, &GA, &FS, &CI, &TC)
+		rataRata := float64(P + V + GA + FS + CI + TC) / 6.0
+
+	if rataRata < 3.33 {
+	   status = "Tidak"
+	} else if rataRata >= 3.33 {
+	   status = "Ya"
+	   jumlahSertifikat++
 	}
-	fmt.Println(pajak)
+	fmt.Println(status)
 }
-
+	fmt.Println(jumlahSertifikat)
+}
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/pajak/Screenshot%202026-10-11%20181946.png
+https://github.com/rollanpake-d/alpro-11-01/blob/3989afa3505f5c1b7b7943c2ef5a428536af4922/praktikum/05-perulangan-for-loop/unguided/ecct/image.png
 
 #### Deskripsi
-belum update
+Pada soal ini berfungsi untuk menyelesaikan persoalan menghitung jumlah rata-rata mahasiswa jika nilai total yang diinputkan berada dibawah rata-rata 3.33 maka status Tidak, jika nilai total yang diinputkan berada tepat di rata-rata 3.33 atau lebih dari 3.33 maka status Ya, disini juga terdapat hasil dari jumlah status antara Ya dan Tidak, jika ada yang mendapatkan Ya maka jumlah yang mendapat sertifikasi akan menghasilkan output sesuai jumlah Ya, begitupun juga sebaliknya dengan status Tidak.
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
 ### 1. "prima.go"
 ### 2. "ecct.go"
 
 ## Kesimpulan
-belum update
+Tujuan praktikum kali ini untuk mengenalkan aturan perulangan For dengan 4 bentuk yaitu for dengan 3 komponen(inisialisasi, kondisi, dan post statement), For hanya dengan kondisi, For tanpa kondisi, dan for dengan range serta Nested For Loop atau For bersarang
 
 ## Referensi
-1. Modul 04 - Runtunan / Sekuensi.PDF  - sumber: Modul Informatics lab,Telkom University.
+1. Modul 05 - Perulangan For - Loop.PDF  - sumber: Modul Informatics lab,Telkom University.
