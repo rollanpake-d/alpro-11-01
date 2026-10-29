@@ -27,10 +27,10 @@ func main () {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/29a30471f149bb0f1e84dbb99349219e9d45cf37/praktikum/06-perulangan-while-loop-dan-repeat/tp/lulus/image.png
+https://github.com/rollanpake-d/alpro-11-01/blob/ce2bbc0c8a1cc68a519bb70143f4e53b6719cd08/praktikum/07-percabangan/tp/bilangan/image.png
 
 #### Deskripsi
-Pada soal kali ini digunakan untuk memecahkan masalah seleksi status kelulusan, user memberikan input berupa variabel nilai jika diinputkan -1 program akan langsung selesai, jika diinputkan nilai lebih kecil dari 60 program akan memberikan status "anda tidak lulus", jika diinputkan nilai lebih besar atau sama dengan 60 program akan memberikan status "anda lulus ujian"
+Pada soal kali ini digunakan untuk menentukan status bilangan genap atau ganjil dan positif atau negatif, menggunakan else if untuk menentukan ganjil,genap,positif, dan negatif serta else untuk menentukan nilai diluar itu yaitu 0.
 
 ### 2. hari.go
 
@@ -73,10 +73,10 @@ func main () {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/29a30471f149bb0f1e84dbb99349219e9d45cf37/praktikum/06-perulangan-while-loop-dan-repeat/tp/deret/image.png
+https://github.com/rollanpake-d/alpro-11-01/blob/ce2bbc0c8a1cc68a519bb70143f4e53b6719cd08/praktikum/07-percabangan/tp/hari/image.png
 
 #### Deskripsi
-pada kode kali ini digunakan untuk menyelesaikan masalah penjumlahan dari sebuah deret bilangan tersebut, jika nilai memenuhi kondisi dimana inisialisasi lebih kecil atau sama dengan variabel yang diinputkan maka program akan berjalan dan menjumlahkan deret bilangan selama kondisi masih terpenuhi sesuai dengan hasil inputnya
+pada kode kali ini digunakan untuk menyelesaikan masalah penentuan nama hari berdasarkan bilangan bulat yang diinput sesuai dengan urutan ke satu yaitu senin hingga urutan ketujuh yaitu minggu menggunakan switch case untuk membungkus input berupa angka untuk menyatakan variabel nomorHari dan memakai default untuk mengeluarkan "Nomor hari tidak valid" bila user memberikan input angka lebih dari 7.
 
 ### 3. terbesar.go
 
@@ -101,40 +101,11 @@ func main() {
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/29a30471f149bb0f1e84dbb99349219e9d45cf37/praktikum/06-perulangan-while-loop-dan-repeat/tp/duaterendah/image.png
+https://github.com/rollanpake-d/alpro-11-01/blob/ce2bbc0c8a1cc68a519bb70143f4e53b6719cd08/praktikum/07-percabangan/tp/terbesar/image.png
 
 
 #### Deskripsi
-pada kode kali ini digunakan untuk mencari variabel nama dengan status nilai terendah diantara variabel lainnya, ditentukan dahulu untuk 2 nama siswa melalui min1 dan min2, fungsinya untuk memberikan identitas khusus 2 nama dengan nilai terendah lalu diberikan sebuah input jumlah siswa yang akan dimasukkan, misal 5 maka hanya bisa menginputkan data 5 siswanya lalu input nama siswanya juga sama nilainya. saat variabel min1 nilainya lebih besar dari min2 nya maka akan digeser ke min2, kemudian karena min1 sudah kosong maka diganti dengan data yang terbaru, lalu bagian else if jika nilai min 1 lebih kecil dari min2 maka min1 tidak diubah karena nilai min2nya masih lebih besar, nah jika tidak keduanya maka data baru tidak dianggap karena nilainya tidak masuk kategori 2 terendahnya
-
-### 4. biaya.go
-
-```go
-package main
-
-import "fmt"
-
-func main () {
-	var n int
-	var biayaKuliah float64
-	
-fmt.Scan(&n)
-
-biayaKuliah = 10000000
-
-	for i := 2; i <= n; i++ {
-		biayaKuliah = biayaKuliah * 1.06
-	}
-	fmt.Printf("%.0f", biayaKuliah)
-}
-```
-
-##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/29a30471f149bb0f1e84dbb99349219e9d45cf37/praktikum/06-perulangan-while-loop-dan-repeat/tp/biaya/image.png
-
-
-#### Deskripsi
-pada kode kali ini digunakan untuk mengetahui hasil penjumlahan biaya kuliah yang mengalami kenaikan sebesar 0,6 persen per tahunnya dari biaya awal kuliah sebesar 10.000.000 juta
+pada kode kali ini digunakan untuk menentukan nilai terbesar dari 3 angka yang ada, tidak menggunakan perulangan dan max, hanya pakai else if.
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan kondisi while loop, dimana kode akan tetap dijalankan ketika masih memenuhi kondisi(masih true), dan repeat until, dimana program akan dihentikan ketika ada nilai yang tidak memenuhi syarat(hingga false)
+Tujuan praktikum kali ini untuk mengenalkan aturan if, else if, if-else, dan switch case
