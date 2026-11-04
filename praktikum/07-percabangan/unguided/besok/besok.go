@@ -13,6 +13,7 @@ func main() {
 		hari[2] = 29
 	}
 
+	//hasil generate AI
 	if b < 1 || b > 12 || t < 1 || t > hari[b] {
 		fmt.Println("Tidak valid")
 		return

@@ -159,9 +159,45 @@ Program ini dibuat untuk perhitungan otomatisasi sesuai kriteria yang sudah dite
 ### 1. [besok.go]
 
 ```go
+package main
 
+import "fmt"
 
+func main() {
+	var t, b, th int
+	fmt.Scan(&t, &b, &th)
+
+	kabisat := (th%4 == 0 && th%100 != 0) || (th%400 == 0)
+
+	hari := []int{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+	if kabisat {
+		hari[2] = 29
+	}
+
+	if b < 1 || b > 12 || t < 1 || t > hari[b] {
+		fmt.Println("Tidak valid")
+		return
+	}
+
+	//hasil generate AI
+	fmt.Println("Valid")
+	
+	t, b, th = t+1, b, th
+	if t > hari[b] {
+		t, b = 1, b+1
+		if b > 12 {
+			b, th = 1, th+1
+		}
+	}
+	fmt.Printf("%d/%d/%d\n", t, b, th)
+}
 ```
+##### output
+
+https://github.com/rollanpake-d/alpro-11-01/blob/3855218b3f6215245cefa53e913ebfc40911921a/praktikum/07-percabangan/unguided/besok/image.png
+
+#### Deskripsi
+Pada soal ini berfungsi untuk menyelesaikan masalah perhitungan tahun kabisat yang mempunyai nilai valid atau tidak valid, program akan mengeluarkan output valid atau tidaknya diikuti baris bawahnya sesuai tanggal, bulan, dan tahun. jika syarat dari input melebihi aturan yang sudah dicantumkan pada kode maka output akan mengeluarkan "tidak valid"
 
 ### 2. [soal_c.go]
 
@@ -208,7 +244,6 @@ func main () {
 }
 
 ```
-
 ##### Output
 https://github.com/rollanpake-d/alpro-11-01/blob/4ac2404d6bc26a4c9014ce5aee5ef404bba373bc/praktikum/07-percabangan/unguided/soal_c/image.png
 
@@ -220,7 +255,7 @@ Pada soal ini berfungsi untuk menyelesaikan masalah perhitungan tiket kereta api
 ### 2. "soal_c.go"
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan percabangan while loop, dan repeat until untuk membedakan dalam proses pemberhentian sebuah program itu, while loop program akan tetap berjalan selama kondisinya benar dan akan berhenti bila kondisinya salah, tapi jika repeat until itu ia akan berjalan bila kondisinya salah dan akan berhenti ketika benar.
+Tujuan praktikum kali ini untuk mengenalkan aturan percabangan if, if-else, dan else if. ketiganya bebas digunakan tergantung kebutuhan dan kondisi.
 
 ## Referensi
 1. Modul 07_Percabangan - sumber: Modul Informatics lab,Telkom University.
