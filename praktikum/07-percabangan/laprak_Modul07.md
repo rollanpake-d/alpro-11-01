@@ -166,18 +166,58 @@ Program ini dibuat untuk perhitungan otomatisasi sesuai kriteria yang sudah dite
 ### 2. [soal_c.go]
 
 ```go
+package main
 
+import "fmt"
+
+func main () {
+	var kelas, hari string
+	var usia int
+	var harga float64
+
+	fmt.Scan(&kelas, &usia, &hari)
+
+	switch kelas {
+	case "ekonomi" :
+		harga = 100000
+	case "bisnis" :
+		harga = 200000
+	case "eksekutif" :
+		harga = 350000
+	default:
+		fmt.Println("Kelas tidak valid")
+		return
+	}
+
+	switch hari {
+	case "sabtu" :
+		harga = harga + (harga * 0.2)
+	case "minggu" :
+		harga = harga + (harga * 0.2)
+	}
+
+	switch {
+	case usia < 3:
+		harga = 0
+	case usia >= 3 && usia <= 12:
+		harga = harga - (harga * 0.5)
+	case usia >= 60:
+		harga = harga - (harga * 0.3)
+	}
+	fmt.Printf("%.0f\n", harga)
+}
 
 ```
 
 ##### Output
-https://github.com/rollanpake-d/alpro-11-01/blob/589460344bcae5231d47eaba0aa7cf38318824c1/praktikum/06-perulangan-while-loop-dan-repeat/unguided/image.png
+https://github.com/rollanpake-d/alpro-11-01/blob/4ac2404d6bc26a4c9014ce5aee5ef404bba373bc/praktikum/07-percabangan/unguided/soal_c/image.png
 
 #### Deskripsi
-Pada soal ini berfungsi untuk menyelesaikan persoalan sebuah proses login bank ketika berhasil akan dilanjutkan ke program melihat saldo, mengurangi saldo, dan keluar. disisi lain jika input password berbeda dari yang sudah ditentuin yaitu angka 1234 dan bila user selama 3 kali salah makan akan terblokir dan program tertutup/tidak bisa lanjut. dalam hal ini menggunakan while loop untuk proses selama benar maka program akan tetap bisa dijalankan dan akan langsung berhenti bila memenuhi kondisi yang sudah ditentukan 
+Pada soal ini berfungsi untuk menyelesaikan masalah perhitungan tiket kereta api berdasarkan kategori kelas kereta, usia dan hari, menggunakan switch case di setiap bagian pada kelas, kereta, dan usia. dengan hasil output berupa harga dari hasil perhitungan diskon yang diperoleh, umur pembeli dan jenis kelas keretanya. 
+
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
 ### 1. "besok.go"
-### 2. soal_c.go"
+### 2. "soal_c.go"
 
 ## Kesimpulan
 Tujuan praktikum kali ini untuk mengenalkan aturan percabangan while loop, dan repeat until untuk membedakan dalam proses pemberhentian sebuah program itu, while loop program akan tetap berjalan selama kondisinya benar dan akan berhenti bila kondisinya salah, tapi jika repeat until itu ia akan berjalan bila kondisinya salah dan akan berhenti ketika benar.
