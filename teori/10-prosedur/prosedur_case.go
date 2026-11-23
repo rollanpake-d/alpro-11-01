@@ -29,7 +29,7 @@ func hitungFF(x, y int) {
 
 func main () {
 	fmt.Println(add(2, 3)) // cara panggil fungsi
-	eating () // cara panggil procedur
+	eating () // cara panggil prosedur
 	fmt.Println(hitungF(2, 3)) // cara panggil fungsi
 	hitungFF(2, 3) // cara panggil prosedur
 
