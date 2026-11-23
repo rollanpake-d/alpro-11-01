@@ -233,6 +233,6 @@ Pada soal ini berfungsi untuk menyelesaikan pengolah data daftar gempa guna meng
 ### 1. "gempa.go"
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan func dan return sebagai nilai balik 
+Tujuan praktikum kali ini untuk mengenalkan aturan func dan return sebagai nilai balik. 
 ## Referensi
 1. Modul 10_fungsi - sumber: Modul Informatics lab,Telkom University.

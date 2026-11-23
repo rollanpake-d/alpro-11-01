@@ -1,10 +1,6 @@
 # <h1 align="center">Tugas Pendahuluan Modul [10] - [10-fungsi]</h1>
 <p align="center">[Paschalis Rolland Setianto Nugroho] - [109092600011]</p>
 
-### 1. Jelaskan perbedaan antara if,if-else, else if, dan switch pada bahasa pemrograman Go! Sebutkan juga dua perbedaan switch pada Go dibandingkan dengan switch pada Java. 
-
-Dalam bahasa Go, if, if-else, dan else if digunakan untuk percabangan berbasis kondisi boolean bertingkat, sementara switch dirancang untuk pencocokan nilai atau kondisi yang lebih rapi tanpa memerlukan break otomatis seperti pada Java.
-
 ### 1. raport.go
 ```go
 package main
@@ -66,7 +62,7 @@ func main() {
 https://github.com/rollanpake-d/alpro-11-01/blob/b0edb770e83894756344b7332b768941ad65b61a/praktikum/10-fungsi/tp/raport/image.png
 
 #### Deskripsi
-Pada soal kali ini digunakan untuk menentukan status bilangan genap atau ganjil dan positif atau negatif, menggunakan else if untuk menentukan ganjil,genap,positif, dan negatif serta else untuk menentukan nilai diluar itu yaitu 0.
+Pada soal kali ini digunakan untuk mengolah data nilai sejumlah mata kuliah guna mengonversi tiap nilai angka menjadi nilai huruf serta menghitung rata-rata seluruh nilai tersebut.
 
 ### 2. inputnilai.go
 
@@ -136,7 +132,7 @@ func main() {
 https://github.com/rollanpake-d/alpro-11-01/blob/b0edb770e83894756344b7332b768941ad65b61a/praktikum/10-fungsi/tp/input_nilai/image.png
 
 #### Deskripsi
-pada kode kali ini digunakan untuk menyelesaikan masalah penentuan nama hari berdasarkan bilangan bulat yang diinput sesuai dengan urutan ke satu yaitu senin hingga urutan ketujuh yaitu minggu menggunakan switch case untuk membungkus input berupa angka untuk menyatakan variabel nomorHari dan memakai default untuk mengeluarkan "Nomor hari tidak valid" bila user memberikan input angka lebih dari 7.
+Kode ini berfungsi untuk menerima dan menyimpan data mahasiswa (NIM, nama, dan nilai) secara berulang hingga input "STOP" dengan mencegah duplikasi NIM, menampilkan daftar data yang tersimpan, serta menghitung rata-rata nilainya.
 
 ## Kesimpulan
-Tujuan praktikum kali ini untuk mengenalkan aturan if, else if, if-else, dan switch case
+Tujuan Tugas Pendahulan ini untuk mengenalkan aturan func dan return sebagai nilai balik. 
