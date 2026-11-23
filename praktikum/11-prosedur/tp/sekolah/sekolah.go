@@ -5,7 +5,7 @@ import "fmt"
 const NMAX = 1001
 
 type tabMurid [NMAX]string
-
+// func cariMurid dibawah ini dibantu dari generate AI
 func cariMurid(T tabMurid, n int, nama string, posisi *int, ketemu *bool) {
 	*ketemu = false
 	*posisi = 0
